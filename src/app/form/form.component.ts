@@ -1,3 +1,6 @@
+
+
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -8,19 +11,23 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  
+  profile =  new FormGroup({
 
-  name= new FormControl;
-  gender= new FormControl;
-  phone= new FormControl;
-  dob= new FormControl;
-  jobTitle = new FormControl;
+  name: new FormControl,
+  gender: new FormControl,
+  phone: new FormControl,
+  dob: new FormControl,
+  jobTitle: new FormControl,
+});
 
-  updateName(){
-    this.name.setValue('Nayar');
-  }
+onSubmit() {
+  // TODO: Use EventEmitter with form value
+  console.warn(this.profile.value);
+}
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
    

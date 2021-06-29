@@ -2,23 +2,23 @@
     <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="flex-start">
         <p>form works!</p>
 
-        <form>
+        <form [formGroup]="profile" (ngSubmit)="onSubmit()">
             <label for="name">Name: </label>
-            <input aria-label="State" [formControl]="name" formControlName="name" />
+            <input aria-label="State" [formControl]="name" />
 
-            <button (click)="updateName()">Update Name</button>
+            <!-- <button (click)="updateName()">Update Name</button> -->
 
             <label for="name">Gender: </label>
-            <input aria-label="State" [formControl]="gender" formControlName="gender" />
+            <input aria-label="State" [formControl]="gender" />
 
             <label for="name">Mobile: </label>
-            <input aria-label="State" [formControl]="phone" formControlName="phone" />
-            <p>{{name.value}}</p>
+            <input aria-label="State" [formControl]="phone" />
+
             <label for="name">DOB: </label>
-            <input aria-label="State" [formControl]="dob" formControlName="dob" />
+            <input aria-label="State" [formControl]="dob" />
 
             <label for="name">Designation: </label>
-            <input aria-label="State" [formControl]="jobTitle" formControlName="jobTitle" />
+            <input aria-label="State" [formControl]="jobTitle" />
         </form>
     </div>
 </div>
