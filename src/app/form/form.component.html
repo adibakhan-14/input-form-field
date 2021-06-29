@@ -1,0 +1,24 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" class="tab">
+    <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="flex-start">
+        <p>form works!</p>
+
+        <form>
+            <label for="name">Name: </label>
+            <input aria-label="State" [formControl]="name" formControlName="name" />
+
+            <button (click)="updateName()">Update Name</button>
+
+            <label for="name">Gender: </label>
+            <input aria-label="State" [formControl]="gender" formControlName="gender" />
+
+            <label for="name">Mobile: </label>
+            <input aria-label="State" [formControl]="phone" formControlName="phone" />
+            <p>{{name.value}}</p>
+            <label for="name">DOB: </label>
+            <input aria-label="State" [formControl]="dob" formControlName="dob" />
+
+            <label for="name">Designation: </label>
+            <input aria-label="State" [formControl]="jobTitle" formControlName="jobTitle" />
+        </form>
+    </div>
+</div>
